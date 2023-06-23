@@ -9,9 +9,7 @@
 @import "base/typography";
 @import "base/queries";
 
-
-
-
+@import "components/inline-btn";
 @import "layout/container";
 
 @import "pages/home";
@@ -45,4 +43,10 @@ body {
   );
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }

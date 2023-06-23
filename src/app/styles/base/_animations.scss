@@ -1,0 +1,14 @@
+@keyframes inline-btn-animation {
+  0% {
+  }
+
+  50% {
+    box-shadow: 0 0.3rem 1.5rem rgba(0, 0, 0, 0.286);
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+    box-shadow: none;
+  }
+}

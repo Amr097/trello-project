@@ -1,7 +1,14 @@
 import React from "react";
+import Description from "./Sections/Description/Description";
+import HotelOverview from "./Sections/HotelOverView/HotelOverview";
 
 const Content = () => {
-  return <main className="hotel-view">Hotel View</main>;
+  return (
+    <main>
+      <HotelOverview />
+      <Description />
+    </main>
+  );
 };
 
 export default Content;
