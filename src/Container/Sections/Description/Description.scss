@@ -84,27 +84,77 @@
       &:not(:last-child) {
         margin-right: -1.5rem;
       }
-
-      //   @for $i from 0 through 3 {
-      //     &:nth-child(#{$i}) {
-      //       transform: translateX(#{1 * (2 / $i)}rem);
-      //     }
-      //   }
-      //   &:nth-child(1) {
-      //     transform: translateX(2rem);
-      //   }
-      //   &:nth-child(2) {
-      //     transform: translateX(1rem);
-      //   }
-      //   &:nth-child(3) {
-      //     transform: translateX(0.5rem);
-      //   }
     }
   }
 }
 
 .user-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.review {
   flex: 1;
   background-color: white;
   box-shadow: var(--shadow);
+  font-size: 1.3rem;
+  padding: 4rem 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &__text {
+    margin-bottom: 2rem;
+    display: inline-block;
+    width: 90%;
+    position: relative;
+    z-index: 4;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    &-box {
+      margin-right: auto;
+    }
+
+    &-name {
+      font-size: inherit;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__photo {
+    width: 4.5rem;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  &__rate {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+  }
+
+  .time {
+    font-size: 1rem;
+  }
+
+  &::before {
+    content: "\201C";
+    font-size: 23rem;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    color: var(--grey-light-3);
+    z-index: 3;
+    top: -2.7rem;
+    left: -1rem;
+    line-height: 1;
+    overflow: hidden;
+  }
 }

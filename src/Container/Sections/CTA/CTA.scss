@@ -1,0 +1,16 @@
+.cta {
+  flex: 1;
+  padding: 3rem 0;
+  background-color: white;
+  text-align: center;
+
+  gap: 3rem;
+
+  &__text {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}

@@ -55,20 +55,47 @@ const Description = () => {
         </div>
       </div>
       <div className="user-reviews">
-        <div className="review">
-          <img src="" alt="" />
-          <p></p>
-          <div>
-            <img src="" alt="" />
-            <div>
-              <h2></h2>
-              <p></p>
+        <figure className="review">
+          <blockquote className="review__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Praesentium eveniet rem nesciunt dicta itaque beatae ut tempora
+          </blockquote>
+          <figcaption className="review__user">
+            <img
+              src="/images/user-3.webp"
+              alt="User Photo"
+              className="review__photo"
+            />
+            <div className="review__user-box">
+              <h2 className="review__user-name">Jack Daniel</h2>
+              <p className="time">23 May 2023</p>
             </div>
-            <p></p>
-          </div>
-        </div>
-        <div className="review"></div>
-        <button className="btn__inline"></button>
+            <p className="review__rate">7.8</p>
+          </figcaption>
+        </figure>
+
+        <figure className="review">
+          <blockquote className="review__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Praesentium eveniet rem nesciunt dicta itaque beatae ut tempora
+          </blockquote>
+          <figcaption className="review__user">
+            <img
+              src="/images/user-2.webp"
+              alt="User Photo"
+              className="review__photo"
+            />
+            <div className="review__user-box">
+              <h2 className="review__user-name">Anna Carol</h2>
+              <p className="time">23 May 2023</p>
+            </div>
+            <p className="review__rate">9.8</p>
+          </figcaption>
+        </figure>
+
+        <button className="btn__inline el--center el-fontsize btn__inline--hover1">
+          Show all <span>&rarr;</span>
+        </button>
       </div>
     </section>
   );
