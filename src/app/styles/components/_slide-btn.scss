@@ -15,6 +15,15 @@
   overflow: hidden;
   cursor: pointer;
 
+  @include response(tab-port) {
+    padding: 4rem 14rem;
+  }
+
+  @include response(phone) {
+    font-size: 2rem;
+    padding: 3.5rem 11rem;
+  }
+
   &--text-1,
   &--text-2 {
     display: inline-block;

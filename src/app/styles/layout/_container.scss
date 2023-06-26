@@ -4,10 +4,19 @@
   background-color: var(--grey-light-1);
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.281);
   min-height: 40vh;
+
+  @include response(small-device) {
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }
 
 .content {
   display: flex;
+
+  @include response(small-device) {
+    flex-direction: column;
+  }
 
   .side-bar {
     background-color: var(--grey-dark-1);

@@ -1,3 +1,5 @@
+@import "../../app/styles/globals";
+
 .header {
   max-width: 120rem;
   height: 7rem;
@@ -6,8 +8,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   font-size: 1.6rem;
+
+  @include response(small-device) {
+    margin: 0 auto;
+  }
+
+  @include response(phone) {
+    height: 11rem;
+    align-content: space-between;
+    padding: 1.5rem 0;
+  }
+
+  @media screen and (width <= 31.25em) {
+    flex-wrap: wrap;
+  }
 
   .logo {
     flex: 0 0 10%;
@@ -19,10 +34,16 @@
 
 .search {
   flex: 0 0 40%;
-
+  background-color: var(--grey-light-2);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (width <= 31.25em) {
+    order: 1;
+    flex-basis: 100%;
+    margin-top: 1rem;
+  }
 
   &__input {
     width: 90%;
@@ -67,7 +88,6 @@
 .user-info {
   align-self: stretch;
   display: flex;
-
   align-items: center;
 
   & > * {
@@ -111,12 +131,16 @@
     color: white;
     font-size: 1.1rem;
     margin-left: -1rem;
-    margin-top: -0.5rem;
+    margin-top: -0.8rem;
     border-radius: 50%;
     transform: translateY(-8px);
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include response(phone) {
+      margin-top: 1rem;
+    }
   }
 
   &__user {

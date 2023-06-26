@@ -1,7 +1,9 @@
+@import "../../app/styles/globals";
+
 .sidebar {
   background-color: var(--grey-dark-1);
-  height: 100rem;
-  width: 30rem;
+  flex: 1;
+  flex-basis: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,11 +16,24 @@
   display: flex;
   flex-direction: column-reverse;
 
+  @include response(small-device) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
   &__item {
     transition: all 0.3s;
     position: relative;
     background-color: transparent;
     margin-top: 1rem;
+    padding: 1rem;
+
+    @include response(small-device) {
+      flex: 1;
+      margin: 0;
+    }
 
     &::before {
       content: "";
@@ -59,16 +74,38 @@
     position: relative;
     z-index: 2;
 
+    @include response(small-device) {
+      justify-content: center;
+    }
+
+    @include response(phone) {
+      flex-direction: column;
+    }
+
     svg {
-      margin: 3rem;
       width: 2rem;
       height: 2rem;
       fill: currentColor;
+      margin: 2rem;
+
+      @include response(small-device) {
+        margin-left: 0;
+      }
+
+      @include response(phone) {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin: 1rem 0;
+      }
     }
     span {
       font-size: 1.8rem;
       text-transform: uppercase;
       color: currentColor;
+
+      @include response(phone) {
+        font-size: 1.4rem;
+      }
     }
   }
 }
@@ -80,4 +117,8 @@
   color: var(--grey-light-1);
   width: 80%;
   text-align: center;
+
+  @include response(small-device) {
+    display: none;
+  }
 }

@@ -1,0 +1,50 @@
+@mixin response($sreen-size) {
+  @if ($sreen-size == phone) {
+    @media only screen and (width <= 41.5em) {
+      //600px
+      @content;
+    }
+  }
+
+
+  @if ($sreen-size == tab-port) {
+    @media only screen and (41.5em < width <= 61em) {
+      //900px
+      @content;
+    }
+  }
+
+
+  @if ($sreen-size == small-device) {
+    @media only screen and ( width <= 75em) {
+      //900px
+      @content;
+    }
+  }
+
+
+  
+  @if ($sreen-size == smaller-device) {
+    @media only screen and ( width <= 46.5em) {
+      //900px
+      @content;
+    }
+  }
+
+
+  @if ($sreen-size == tab-land) {
+    @media only screen and (61em < width <= 75em) {
+      //1200px
+      @content;
+    }
+  }
+
+
+
+  @if ($sreen-size == big-desktop) {
+    @media only screen and (width > 121em) {
+      //2000px
+      @content;
+    }
+  }
+}
