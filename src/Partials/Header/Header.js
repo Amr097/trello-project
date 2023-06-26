@@ -34,10 +34,16 @@ const Header = () => {
           <span className="user-info__notification">8</span>
         </div>
 
-        <div className="user-info__user">
+        <button className="user-info__user">
           <img src="/images/pngwing.com.webp" alt="User photo" />
           <span className="user-info__username">Hedwig</span>
-        </div>
+          <ul className="user-info__list">
+            <li className="user-info__list--item">Lorem Ipsum</li>
+            <li className="user-info__list--item">Lorem Ipsum</li>
+            <li className="user-info__list--item">Lorem Ipsum</li>
+            <li className="user-info__list--item">Lorem Ipsum</li>
+          </ul>
+        </button>
       </nav>
     </header>
   );
